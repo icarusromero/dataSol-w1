@@ -20,17 +20,16 @@ def check_if_int(initguess):
 name = input('What is your name?')
 print('Hello, ' + name)
 number = random.randint(1, 100)
-print(number)
 print(name + ', I\'m thinking of a number between 1 and 100.')
 print('Try to guess my number.')
 
 initguess = input('Your guess?')
 
 guess = check_if_int(initguess)
-
+guesses = 1
 
 if guess == number:
-    guesses = 1
+    
     print('Well done,' + name + '! You found my number in ' + guesses + ' try!')
 else:
     if guess < 1 or guess > 100:
