@@ -30,7 +30,8 @@ guess = check_if_int(initguess)
 
 
 if guess == number:
-    print('Well done,' + name + '! You found my number in 1 try!')
+    guesses = 1
+    print('Well done,' + name + '! You found my number in ' + guesses + ' try!')
 else:
     if guess < 1 or guess > 100:
         print('Thought you could get away with an out of range number, sweaty? I don\'t think so :)).')
@@ -38,7 +39,7 @@ else:
         print('Your guess is too high, try again.')
     elif(guess < number):
         print('Your guess is too low, try again.')
-    guesses = 1
+    
     while(guess != number):
         guess = input('Your guess?')
         guess = check_if_int(guess)
