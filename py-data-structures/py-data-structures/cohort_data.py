@@ -289,12 +289,9 @@ def get_housemates_for(filename, name):
                 if split_line[2] != '':
                       house = split_line[2]
                       cohort = split_line[4].strip('\n')
+          
 
-    filename.close()
-
-    filename2 = open(filename)
-
-    for line in filename2:
+    for line in filename:
           print(line)
           split_line = line.split('|')
           student = f'{split_line[0]} {split_line[1]}'
